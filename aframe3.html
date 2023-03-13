@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+
+
+<body>
+    <a-scene>
+        <!-- Create a plane for the movie screen -->
+        <a-plane position="0 4 -10" width="16" height="9" color="#fff" src="#screen-texture"></a-plane>
+        <a-plane rotation="-90 0 0" width="30" height="30" color="#555"></a-plane>
+        <!-- Create the theater seats -->
+        <a-entity position="-4 0 -10">
+          <a-entity position="0 0 0" rotation="0 90 0">
+            <a-box color="#bfbfbf" width="0.8" height="1" depth="1.5"></a-box>
+          </a-entity>
+          <a-entity position="1 0 0" rotation="0 90 0">
+            <a-box color="#bfbfbf" width="0.8" height="1" depth="1.5"></a-box>
+          </a-entity>
+          <a-entity position="2 0 0" rotation="0 90 0">
+            <a-box color="#bfbfbf" width="0.8" height="1" depth="1.5"></a-box>
+          </a-entity>
+          <a-entity position="3 0 0" rotation="0 90 0">
+            <a-box color="#bfbfbf" width="0.8" height="1" depth="1.5"></a-box>
+          </a-entity>
+        </a-entity>
+
+        <!-- Create the video player -->
+        <a-video position="0 4 -10" width="10" height="9" autoplay loop src="movie1.mp4"></a-video>
+
+        <!-- Set the texture for the movie screen -->
+        <a-assets>
+          <img id="screen-texture" src="./fast10.webp">
+        </a-assets>
+      </a-scene>
+</body>
+
+</html>
